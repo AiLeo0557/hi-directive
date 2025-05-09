@@ -7,10 +7,10 @@ export default {
             el.onmouseenter = binding.value.bind(null, true)
             break
           case 'out':
-            el.onmouseenter = binding.value.bind(null, false)
+            el.onmouseleave = binding.value.bind(null, false)
             break
           default:
-            el.onmouseenter = el.onmouseleave = binding.value.bind(null, undefined)
+            el.onmouseleave = el.onmouseenter = binding.value.bind(null, undefined)
         }
       },
       beforeUnmount(el: HTMLElement) {
