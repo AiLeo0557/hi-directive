@@ -24,6 +24,9 @@ export default {
           const wheel_data = e.wheelDelta || -e.wheelDeltaY * 40
           binding.value.value.setScrollLeft(binding.value.value.wrapRef.scrollLeft - wheel_data)
         }
+      },
+      beforeUnmount(el: HTMLElement) {
+        el.onwheel = null
       }
     })
   }
